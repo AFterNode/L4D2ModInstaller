@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             gbStep1 = new GroupBox();
+            lbIs18 = new Label();
             lbExtractProgress = new Label();
             btnSelectModpack = new Button();
             lbHasVoice = new Label();
@@ -49,11 +50,12 @@
             btnRestore = new Button();
             btnInstallMod = new Button();
             gbOther = new GroupBox();
-            lbIs18 = new Label();
+            lbSoftwareInfo = new Label();
             gbStep1.SuspendLayout();
             gbStep2.SuspendLayout();
             gbStep3.SuspendLayout();
             gbStep4.SuspendLayout();
+            gbOther.SuspendLayout();
             SuspendLayout();
             // 
             // gbStep1
@@ -70,6 +72,15 @@
             gbStep1.TabIndex = 0;
             gbStep1.TabStop = false;
             gbStep1.Text = "步骤一：选择并预加载模组包";
+            // 
+            // lbIs18
+            // 
+            lbIs18.AutoSize = true;
+            lbIs18.Location = new Point(264, 19);
+            lbIs18.Name = "lbIs18";
+            lbIs18.Size = new Size(92, 17);
+            lbIs18.TabIndex = 6;
+            lbIs18.Text = "是否为限制级：";
             // 
             // lbExtractProgress
             // 
@@ -257,6 +268,7 @@
             // 
             // gbOther
             // 
+            gbOther.Controls.Add(lbSoftwareInfo);
             gbOther.Location = new Point(325, 156);
             gbOther.Name = "gbOther";
             gbOther.Size = new Size(220, 325);
@@ -264,14 +276,14 @@
             gbOther.TabStop = false;
             gbOther.Text = "其他";
             // 
-            // lbIs18
+            // lbSoftwareInfo
             // 
-            lbIs18.AutoSize = true;
-            lbIs18.Location = new Point(264, 19);
-            lbIs18.Name = "lbIs18";
-            lbIs18.Size = new Size(92, 17);
-            lbIs18.TabIndex = 6;
-            lbIs18.Text = "是否为限制级：";
+            lbSoftwareInfo.AutoSize = true;
+            lbSoftwareInfo.Location = new Point(6, 218);
+            lbSoftwareInfo.Name = "lbSoftwareInfo";
+            lbSoftwareInfo.Size = new Size(93, 17);
+            lbSoftwareInfo.TabIndex = 0;
+            lbSoftwareInfo.Text = "lbSoftwareInfo";
             // 
             // MainWindow
             // 
@@ -294,6 +306,8 @@
             gbStep3.PerformLayout();
             gbStep4.ResumeLayout(false);
             gbStep4.PerformLayout();
+            gbOther.ResumeLayout(false);
+            gbOther.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -321,5 +335,6 @@
         private Button btnRebuildAudioCache;
         private GroupBox gbOther;
         private Label lbIs18;
+        private Label lbSoftwareInfo;
     }
 }

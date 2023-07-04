@@ -23,6 +23,10 @@ namespace L4D2ModInstaller
             InitializeComponent();
             tbInstallPath.Text = SteamUtil.GetL4D2InstallPath();
             Control.CheckForIllegalCrossThreadCalls = false;
+
+            string softwareInfo = "";
+            softwareInfo += "L4D2ModInstaller " + Program.VERSION + "\n";
+            lbSoftwareInfo.Text = softwareInfo;
         }
 
         private async void btnSelectModpack_Click(object sender, EventArgs e)
