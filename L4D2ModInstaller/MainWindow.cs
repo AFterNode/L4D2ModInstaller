@@ -1,5 +1,6 @@
 ﻿using L4D2ModInstaller.Security;
 using L4D2ModInstaller.Settings;
+using L4D2ModInstaller.Ui;
 using L4D2ModInstaller.Utils;
 using Newtonsoft.Json;
 using System.Diagnostics;
@@ -207,6 +208,17 @@ namespace L4D2ModInstaller
         private void btnSettings_Click(object sender, EventArgs e)
         {
             new SettingsWindow().Visible = true;
+        }
+
+        private void btnFurtherInfo_Click(object sender, EventArgs e)
+        {
+            if (currentManifest == null)
+            {
+                MessageBox.Show("请先选择模组包");
+                return;
+            }
+
+            new FurtherModInfo(currentManifest).Visible = true;
         }
     }
 }

@@ -50,8 +50,9 @@
             btnRestore = new Button();
             btnInstallMod = new Button();
             gbOther = new GroupBox();
-            lbSoftwareInfo = new Label();
             btnSettings = new Button();
+            lbSoftwareInfo = new Label();
+            btnFurtherInfo = new Button();
             gbStep1.SuspendLayout();
             gbStep2.SuspendLayout();
             gbStep3.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             // gbStep1
             // 
+            gbStep1.Controls.Add(btnFurtherInfo);
             gbStep1.Controls.Add(lbIs18);
             gbStep1.Controls.Add(lbExtractProgress);
             gbStep1.Controls.Add(btnSelectModpack);
@@ -278,15 +280,6 @@
             gbOther.TabStop = false;
             gbOther.Text = "其他";
             // 
-            // lbSoftwareInfo
-            // 
-            lbSoftwareInfo.AutoSize = true;
-            lbSoftwareInfo.Location = new Point(6, 218);
-            lbSoftwareInfo.Name = "lbSoftwareInfo";
-            lbSoftwareInfo.Size = new Size(93, 17);
-            lbSoftwareInfo.TabIndex = 0;
-            lbSoftwareInfo.Text = "lbSoftwareInfo";
-            // 
             // btnSettings
             // 
             btnSettings.Location = new Point(6, 22);
@@ -296,6 +289,25 @@
             btnSettings.Text = "设置";
             btnSettings.UseVisualStyleBackColor = true;
             btnSettings.Click += btnSettings_Click;
+            // 
+            // lbSoftwareInfo
+            // 
+            lbSoftwareInfo.AutoSize = true;
+            lbSoftwareInfo.Location = new Point(6, 218);
+            lbSoftwareInfo.Name = "lbSoftwareInfo";
+            lbSoftwareInfo.Size = new Size(93, 17);
+            lbSoftwareInfo.TabIndex = 0;
+            lbSoftwareInfo.Text = "lbSoftwareInfo";
+            // 
+            // btnFurtherInfo
+            // 
+            btnFurtherInfo.Location = new Point(87, 73);
+            btnFurtherInfo.Name = "btnFurtherInfo";
+            btnFurtherInfo.Size = new Size(75, 23);
+            btnFurtherInfo.TabIndex = 7;
+            btnFurtherInfo.Text = "详细信息";
+            btnFurtherInfo.UseVisualStyleBackColor = true;
+            btnFurtherInfo.Click += btnFurtherInfo_Click;
             // 
             // MainWindow
             // 
@@ -349,5 +361,6 @@
         private Label lbIs18;
         private Label lbSoftwareInfo;
         private Button btnSettings;
+        private Button btnFurtherInfo;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace L4D2ModInstaller.Utils
 {
-    internal class Manifest
+    public class Manifest
     {
         public string name = "";
         public bool hasMainMod = false;
@@ -15,5 +15,10 @@ namespace L4D2ModInstaller.Utils
 
         // 是否为限制级
         public bool require18 = false;
+
+        // 作者
+        public string author = "未指定";
+        // 备注
+        public string comment = "";
     }
 }
