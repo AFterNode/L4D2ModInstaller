@@ -62,6 +62,8 @@ namespace L4D2ModInstaller
                         if (!currentManifest.hasVoice && !currentManifest.hasV1Voice) voiceModStatus += "否";
                         lbHasVoice.Text = voiceModStatus;
 
+                        if (currentManifest.require18) lbIs18.Text = "是否为限制级：是"; else lbIs18.Text = "是否为限制级：否";
+
                         lbExtractProgress.Text = "预加载完成";
                     }
                     catch (Exception ex)

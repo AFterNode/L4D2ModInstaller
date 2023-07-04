@@ -48,6 +48,8 @@
             lbInstallProgress = new Label();
             btnRestore = new Button();
             btnInstallMod = new Button();
+            gbOther = new GroupBox();
+            lbIs18 = new Label();
             gbStep1.SuspendLayout();
             gbStep2.SuspendLayout();
             gbStep3.SuspendLayout();
@@ -56,6 +58,7 @@
             // 
             // gbStep1
             // 
+            gbStep1.Controls.Add(lbIs18);
             gbStep1.Controls.Add(lbExtractProgress);
             gbStep1.Controls.Add(btnSelectModpack);
             gbStep1.Controls.Add(lbHasVoice);
@@ -63,7 +66,7 @@
             gbStep1.Controls.Add(lbSelectedModpack);
             gbStep1.Location = new Point(12, 12);
             gbStep1.Name = "gbStep1";
-            gbStep1.Size = new Size(307, 138);
+            gbStep1.Size = new Size(533, 138);
             gbStep1.TabIndex = 0;
             gbStep1.TabStop = false;
             gbStep1.Text = "步骤一：选择并预加载模组包";
@@ -206,7 +209,7 @@
             gbStep4.Controls.Add(lbInstallProgress);
             gbStep4.Controls.Add(btnRestore);
             gbStep4.Controls.Add(btnInstallMod);
-            gbStep4.Location = new Point(325, 12);
+            gbStep4.Location = new Point(551, 12);
             gbStep4.Name = "gbStep4";
             gbStep4.Size = new Size(263, 471);
             gbStep4.TabIndex = 3;
@@ -252,11 +255,30 @@
             btnInstallMod.UseVisualStyleBackColor = true;
             btnInstallMod.Click += btnInstallMod_Click;
             // 
+            // gbOther
+            // 
+            gbOther.Location = new Point(325, 156);
+            gbOther.Name = "gbOther";
+            gbOther.Size = new Size(220, 325);
+            gbOther.TabIndex = 4;
+            gbOther.TabStop = false;
+            gbOther.Text = "其他";
+            // 
+            // lbIs18
+            // 
+            lbIs18.AutoSize = true;
+            lbIs18.Location = new Point(264, 19);
+            lbIs18.Name = "lbIs18";
+            lbIs18.Size = new Size(92, 17);
+            lbIs18.TabIndex = 6;
+            lbIs18.Text = "是否为限制级：";
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 498);
+            ClientSize = new Size(826, 493);
+            Controls.Add(gbOther);
             Controls.Add(gbStep4);
             Controls.Add(gbStep3);
             Controls.Add(gbStep2);
@@ -297,5 +319,7 @@
         private Button btnRestore;
         private Label lbInstallProgress;
         private Button btnRebuildAudioCache;
+        private GroupBox gbOther;
+        private Label lbIs18;
     }
 }
