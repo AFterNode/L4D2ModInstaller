@@ -42,6 +42,8 @@ namespace L4D2ModInstaller
                 string path = dlg.FileName;
                 await Task.Run(() =>
                 {
+                    DeleteModCache();
+
                     lbExtractProgress.Text = "正在读取";
                     try
                     {
