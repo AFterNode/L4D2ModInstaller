@@ -12,5 +12,8 @@ namespace L4D2ModInstaller.Utils
         public bool hasMainMod = false;
         public bool hasVoice = false;
         public bool hasV1Voice = false;
+
+        // 是否为限制级
+        public bool require18 = false;
     }
 }

@@ -3,3 +3,7 @@
 ################################################################################
 
 /L4D2ModInstaller/obj/Debug/net6.0-windows
+/L4D2ModInstaller/obj
+/L4D2ModInstaller/bin
+
+.vs
