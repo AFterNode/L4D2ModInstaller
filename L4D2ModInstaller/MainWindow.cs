@@ -1,4 +1,5 @@
-﻿using L4D2ModInstaller.Utils;
+﻿using L4D2ModInstaller.Settings;
+using L4D2ModInstaller.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -189,6 +190,11 @@ namespace L4D2ModInstaller
             proc.Start();
             proc.WaitForExit();
             lbInstallProgress.Text = "已启动游戏并执行命令";
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            new SettingsWindow().Visible = true;
         }
     }
 }

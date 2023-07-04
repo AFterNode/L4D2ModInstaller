@@ -51,6 +51,7 @@
             btnInstallMod = new Button();
             gbOther = new GroupBox();
             lbSoftwareInfo = new Label();
+            btnSettings = new Button();
             gbStep1.SuspendLayout();
             gbStep2.SuspendLayout();
             gbStep3.SuspendLayout();
@@ -268,6 +269,7 @@
             // 
             // gbOther
             // 
+            gbOther.Controls.Add(btnSettings);
             gbOther.Controls.Add(lbSoftwareInfo);
             gbOther.Location = new Point(325, 156);
             gbOther.Name = "gbOther";
@@ -284,6 +286,16 @@
             lbSoftwareInfo.Size = new Size(93, 17);
             lbSoftwareInfo.TabIndex = 0;
             lbSoftwareInfo.Text = "lbSoftwareInfo";
+            // 
+            // btnSettings
+            // 
+            btnSettings.Location = new Point(6, 22);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Size = new Size(208, 23);
+            btnSettings.TabIndex = 1;
+            btnSettings.Text = "设置";
+            btnSettings.UseVisualStyleBackColor = true;
+            btnSettings.Click += btnSettings_Click;
             // 
             // MainWindow
             // 
@@ -336,5 +348,6 @@
         private GroupBox gbOther;
         private Label lbIs18;
         private Label lbSoftwareInfo;
+        private Button btnSettings;
     }
 }
