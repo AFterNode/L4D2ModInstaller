@@ -6,7 +6,7 @@ namespace L4D2ModInstaller
 {
     internal static class Program
     {
-        public const string VERSION = "1.0.0";
+        public const string VERSION = "1.1.0";
         public static string CONFIG_FILE = Directory.GetCurrentDirectory() + "\\config.json";
 
         public static Configuration config;
