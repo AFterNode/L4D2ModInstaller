@@ -1,17 +1,8 @@
-﻿using L4D2ModInstaller.Settings;
+﻿using L4D2ModInstaller.Security;
+using L4D2ModInstaller.Settings;
 using L4D2ModInstaller.Utils;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.IO.Compression;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace L4D2ModInstaller
 {
@@ -145,6 +136,25 @@ namespace L4D2ModInstaller
             {
                 MessageBox.Show("请先加载模组文件");
                 return;
+            }
+
+            if (currentManifest.require18 && !Program.config.allowLimitedContent)
+            {
+                MessageBox.Show("当前模组含有限制级内容，如需继续安装请在设置中确认");
+                return;
+            }
+
+            if (Program.config.ignoreSecurityAlert)
+            {
+                bool detected = false;
+
+                if (SecurityManager.CheckBinaryModification())
+                {
+                    detected = true;
+                    MessageBox.Show("当前模组对游戏本体进行过多修改，如需继续安装请在设置中启用“忽略安全警报");
+                }
+
+                if (detected) return;
             }
 
             await Task.Run(() =>
