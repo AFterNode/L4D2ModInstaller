@@ -74,7 +74,7 @@
             tbComments.Name = "tbComments";
             tbComments.ReadOnly = true;
             tbComments.ScrollBars = ScrollBars.Horizontal;
-            tbComments.Size = new Size(157, 178);
+            tbComments.Size = new Size(558, 178);
             tbComments.TabIndex = 3;
             // 
             // lbIsLimited
@@ -125,7 +125,7 @@
             gbMain.Controls.Add(lbIsLimited);
             gbMain.Location = new Point(12, 12);
             gbMain.Name = "gbMain";
-            gbMain.Size = new Size(250, 311);
+            gbMain.Size = new Size(620, 311);
             gbMain.TabIndex = 8;
             gbMain.TabStop = false;
             gbMain.Text = "主要信息";
@@ -134,7 +134,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(389, 641);
+            ClientSize = new Size(644, 336);
             Controls.Add(gbMain);
             Name = "FurtherModInfo";
             Text = "详细信息";
